@@ -1,0 +1,29 @@
+{
+  "name": "text4quiz",
+  "version": "1.0.0",
+  "description": "CSE490c ICTD: Project1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pathiratk/Text4Quiz.git"
+  },
+  "author": "Pathirat Kosakanchit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pathiratk/Text4Quiz/issues"
+  },
+  "homepage": "https://github.com/pathiratk/Text4Quiz#readme",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "mongoose": "^5.3.3",
+    "twilio": "^3.22.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
+  }
+}
