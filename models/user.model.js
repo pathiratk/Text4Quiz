@@ -7,7 +7,8 @@ let UserSchema = new Schema({
         math: {type: Number, default: 0},
         english : {type: Number, default: 0}
     },
-    status: {type: String, default: "registering"}
+    status: {type: String, default: "registering"},
+    currentQ: {type: String}
 });
 
 // Export the model
