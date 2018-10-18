@@ -59,3 +59,14 @@ typings/
 
 # next.js build output
 .next
+
+# for class submission
+README.md
+.sample.env
+
+# vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
