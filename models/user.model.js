@@ -3,12 +3,18 @@ const Schema = mongoose.Schema;
 
 let UserSchema = new Schema({
     number: {type: String, required: true},
-    progress: {
-        math: {type: Number, default: 0},
-        english : {type: Number, default: 0}
-    },
     status: {type: String, default: "registering"},
-    currentQ: {type: String}
+    currentQ: {type: String},
+    progress: {
+        math: {
+            correct: {type: Number, default: 0},
+            current: {type: Number, default: 0}
+        },
+        english: {
+            correct: {type: Number, default: 0},
+            current: {type: Number, default: 0}
+        }
+    }
 });
 
 // Export the model
