@@ -8,13 +8,13 @@ Send 1 to register for our service";
 
   
 const regComplete = "You are registered for Text4Quiz!\n\
-Send \“1\” or \"math\" for a math question,\n\
-send \“2\” or \"eng\" for an English question,\n\
-send “0” to see your stats";
+Send \"1\" or \"math\" for a math question,\n\
+send \"2\" or \"eng\" for an English question,\n\
+send \"0\" to see your stats";
 
-const instruction = "Send \“1\” or \"math\" for a math question,\n\
-send \“2\” or \"eng\" for an English question,\n\
-send “0” to see your stats";
+const instruction = "Send \"1\" or \"math\" for a math question,\n\
+send \"2\" or \"eng\" for an English question,\n\
+send \"0\" to see your stats";
 
 const mathProblem1 = "Anna has 5 apples. Bob has 3 apples more than Anna. How many apples does Bob have?\n1. 8\n2. 2";
 const mathSol1 = "1";
@@ -70,6 +70,7 @@ exports.sms = function (req, res) {
           if (body == '1') {
             User.findOneAndUpdate({"number": number}, {$set: {"status" : "idle"}}, function(err) {
               if (err) {
+                console.log(err);
                 return;
               }
             });
@@ -87,7 +88,7 @@ exports.sms = function (req, res) {
 
           var eAtt = user[0].progress.english.current;
           var eCor = user[0].progress.english.correct;
-          sendMessage("“Math - Great job! You answered " + mCor + "\/" + mAtt +" correctly.\n\English - Excellent! you answered " + eCor + "\/" + eAtt +" correctly!”", res);
+          sendMessage("Math - Great job! You answered " + mCor + "\/" + mAtt +" correctly.\n\English - Excellent! you answered " + eCor + "\/" + eAtt +" correctly!", res);
         } else if (status == "idle") {
           // send the problem the user is asking
           // if msg is invalid, send instruction
@@ -95,6 +96,7 @@ exports.sms = function (req, res) {
           if (body.toLowerCase() == "math" || body == "1") {
             User.findOneAndUpdate({"number": number}, {$inc: {"progress.math.current" : 1}, $set: {"currentQ": "math", "status": "waiting"}}, function(err) {
               if (err) {
+                console.log(err);
                 return;
               }
               mathQ +=1 ;
