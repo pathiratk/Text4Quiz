@@ -13,5 +13,5 @@ This application is written using Node.js with MongoDB database. To run the appl
 2. Create and edit the configuration file `.env`
 3. Start the app by running `npm start`
 
-![screenshot1](screenshots/text4quiz1.PNG "screenshot1")
-![screenshot2](screenshots/text4quiz2.PNG "screenshot2")
+## Screenshot ##
+<img src="screenshots/text4quiz.png" width="600">
