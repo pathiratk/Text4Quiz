@@ -18,10 +18,10 @@
   },
   "homepage": "https://github.com/pathiratk/Text4Quiz#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
+    "body-parser": "^1.20.1",
     "dotenv": "^6.1.0",
     "event-stream": "^3.3.4",
-    "express": "^4.16.4",
+    "express": "^4.18.2",
     "mongoose": "^5.7.5",
     "twilio": "^3.22.0"
   },
