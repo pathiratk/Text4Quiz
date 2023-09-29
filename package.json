@@ -22,7 +22,7 @@
     "dotenv": "^6.1.0",
     "event-stream": "^3.3.4",
     "express": "^4.16.4",
-    "mongoose": "^5.7.5",
+    "mongoose": "^5.13.20",
     "twilio": "^3.22.0"
   },
   "devDependencies": {
